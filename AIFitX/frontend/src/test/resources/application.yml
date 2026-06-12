@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:aifitx-test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+app:
+  jwt:
+    secret: test-secret-that-is-long-enough-for-hmac-sha-signing
+    expiration: 86400000
+  cors:
+    allowed-origins: http://localhost:3000
